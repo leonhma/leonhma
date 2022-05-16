@@ -27,5 +27,5 @@ export default async function handler(
       }, 'hoan_an_cac')
     })
   })
-  res.status(200).json(await data.json())
+  res.status(200).setHeader('Access-Control-Allow-Origin', '*').json(await data.json())
 }
